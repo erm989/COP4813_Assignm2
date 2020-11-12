@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" href="/Project2_Flesk/static/Project2.css">
+</head>
+<body>
+    <h1>Search</h1>
+    <form action="" method="POST" name="NYTs">
+        {{ form.csrf_token }}
+        {{ form.hidden_tag() }}
+
+        <p>Search:
+            {{ form.search() }}
+        </p>
+        <p>Topic:
+            {{ form.topic() }}
+        </p>
+        <p>Place:
+            {{ form.sort() }}
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</body>
+</html>

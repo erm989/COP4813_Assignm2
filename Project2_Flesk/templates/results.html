@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link href="../static/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<h1> Abstracts about {{ topic }} based on your selection and sorted {{ sort }}  </h1>
+
+    {% for i in response["response"]["docs"] %}
+    <p> {{ i["abstract"] }} </p>
+
+    {% endfor %}
+
+</body>
+</html>
